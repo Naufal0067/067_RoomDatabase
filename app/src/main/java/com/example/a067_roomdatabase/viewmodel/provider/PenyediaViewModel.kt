@@ -1,0 +1,3 @@
+package com.example.a067_roomdatabase.viewmodel.provider
+
+object PenyediaViewModel
