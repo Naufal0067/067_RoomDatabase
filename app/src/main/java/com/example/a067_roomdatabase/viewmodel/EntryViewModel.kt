@@ -8,14 +8,19 @@ import androidx.lifecycle.ViewModel
 import com.example.a067_roomdatabase.repositori.RepositoriSiswa
 
 class EntryViewModel(private val repositoriSiswa: RepositoriSiswa): ViewModel() {
-    /** berisi status siswa saat ini */
     var uiStateSiswa by mutableStateOf(UIStateSiswa())
-        private set
 
-    private fun validasiInput(
-        uiState: DetailSiswa = uiStateSiswa
-            .detailSiswa
-    ): Boolean {
-        nama.isNotBlank() && alamat.isNotBlank() && telepon.isNotBlank()
+    private fun validasiInput(uiState: DetailSiswa = uiStateSiswa.detailSiswa): Boolean{
+        return with(uiState){
+            nama.isNotBlank() && alamat.isNotBlank() && telpon.isNotBlank()
+        }
     }
+
+    fun updateUiState(detailSiswa: DetailSiswa){
+        uiStateSiswa =
+            UIStateSiswa(detailSiswa = detailSiswa,
+                isEntryValid = validasiInput(detailSiswa))
+    }
+
+
 }
