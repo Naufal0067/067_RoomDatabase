@@ -6,6 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.example.a067_roomdatabase.repositori.RepositoriSiswa
+import com.example.a067_roomdatabase.room.Siswa
 
 class EntryViewModel(private val repositoriSiswa: RepositoriSiswa): ViewModel() {
     var uiStateSiswa by mutableStateOf(UIStateSiswa())
@@ -42,5 +43,19 @@ data class DetailSiswa(
     val id: Int = 0,
     val nama: String = "",
     val alamat: String = "",
-    val telpon: String = "",
+    val telepon: String = "",
 )
+
+/**
+* Fungsi untuk mengkonversi data input ke data dalam tabel sesuai jenis datanya
+*/
+
+
+fun DetailSiswa.toSiswa(): Siswa = Siswa(
+    id = id,
+    nama = nama,
+    alamat = alamat,
+    telepon = telepon
+)
+
+
