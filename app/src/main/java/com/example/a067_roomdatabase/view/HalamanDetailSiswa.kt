@@ -37,8 +37,8 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.a067_roomdatabase.R
 import com.example.a067_roomdatabase.room.Siswa
 import com.example.a067_roomdatabase.view.route.DestinasiDetailSiswa
-import com.example.a067_roomdatabase.viewmodel.provider.DetailSiswaUiState
-import com.example.a067_roomdatabase.viewmodel.provider.DetailViewModel
+import com.example.a067_roomdatabase.viewmodel.DetailSiswaUiState
+import com.example.a067_roomdatabase.viewmodel.DetailViewModel
 import com.example.a067_roomdatabase.viewmodel.provider.PenyediaViewModel
 import com.example.a067_roomdatabase.viewmodel.toSiswa
 import kotlinx.coroutines.launch
