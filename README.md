@@ -6,6 +6,9 @@ Data sebelum di edit
 <img width="1920" height="1080" alt="Screenshot 2025-12-04 130651" src="https://github.com/user-attachments/assets/6d9734b5-c5d2-46bf-8e1b-decb159a947d" />
 Data sesudah di edit
 <img width="1920" height="1080" alt="Screenshot 2025-12-04 140021" src="https://github.com/user-attachments/assets/58475797-f07b-40f1-a1cc-d40d718ec879" />
+halaman edit
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bfae6b9f-20b2-4a50-b4ce-23499280ab72" />
+
 
 
 
