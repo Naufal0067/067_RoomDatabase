@@ -1,12 +1,12 @@
 package com.example.a067_roomdatabase.viewmodel
 
-import androidx.compose.runtime.State
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import com.example.a067_roomdatabase.repositori.RepositoriSiswa
 import com.example.a067_roomdatabase.room.Siswa
+
 
 class EntryViewModel(private val repositoriSiswa: RepositoriSiswa): ViewModel() {
     var uiStateSiswa by mutableStateOf(UIStateSiswa())
@@ -16,7 +16,6 @@ class EntryViewModel(private val repositoriSiswa: RepositoriSiswa): ViewModel() 
             nama.isNotBlank() && alamat.isNotBlank() && telepon.isNotBlank()
         }
     }
-
     fun updateUiState(detailSiswa: DetailSiswa){
         uiStateSiswa =
             UIStateSiswa(detailSiswa = detailSiswa,
@@ -29,11 +28,6 @@ class EntryViewModel(private val repositoriSiswa: RepositoriSiswa): ViewModel() 
         }
     }
 }
-
-/**
- * mewakili status UI saat ini
- */
-
 data class UIStateSiswa(
     val detailSiswa: DetailSiswa = DetailSiswa(),
     val isEntryValid: Boolean = false
@@ -41,16 +35,10 @@ data class UIStateSiswa(
 
 data class DetailSiswa(
     val id: Int = 0,
-    val nama: String = "",
+    val nama: String ="",
     val alamat: String = "",
     val telepon: String = "",
 )
-
-/**
-* Fungsi untuk mengkonversi data input ke data dalam tabel sesuai jenis datanya
-*/
-
-
 fun DetailSiswa.toSiswa(): Siswa = Siswa(
     id = id,
     nama = nama,

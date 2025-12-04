@@ -7,6 +7,7 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.a067_roomdatabase.repositori.AplikasiSiswa
 import com.example.a067_roomdatabase.viewmodel.DetailViewModel
+import com.example.a067_roomdatabase.viewmodel.EditViewModel
 import com.example.a067_roomdatabase.viewmodel.EntryViewModel
 import com.example.a067_roomdatabase.viewmodel.HomeViewModel
 
