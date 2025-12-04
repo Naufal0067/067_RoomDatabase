@@ -1,5 +1,7 @@
 package com.example.a067_roomdatabase.view
 
+
+
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -38,10 +40,12 @@ import com.example.a067_roomdatabase.view.route.DestinasiHome
 import com.example.a067_roomdatabase.viewmodel.HomeViewModel
 import com.example.a067_roomdatabase.viewmodel.provider.PenyediaViewModel
 
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
     navigateToItemEntry: () -> Unit,
+    navigateToItemUpdate:(Int) -> Unit,
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
 ){
@@ -83,6 +87,7 @@ fun HomeScreen(
 @Composable
 fun BodyHome(
     itemSiswa: List<Siswa>,
+    onSiswaClick = navigateToItemUpdate,
     modifier: Modifier=Modifier){
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -106,6 +111,7 @@ fun BodyHome(
 @Composable
 fun ListSiswa(
     itemSiswa : List<Siswa>,
+    onSiswaClick: (Siswa) -> Unit,
     modifier: Modifier=Modifier
 ){
     LazyColumn(modifier = Modifier){
